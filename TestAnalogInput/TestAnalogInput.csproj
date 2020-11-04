@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C550AA42-C6C2-4BDB-B96A-E20C5DC67890}</ProjectGuid>
+    <ProjectGuid>{6D3B0CDD-793A-412F-ACEC-A316E33DD8DD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TestMccBoard</RootNamespace>
-    <AssemblyName>TestMccBoard</AssemblyName>
+    <RootNamespace>TestAnalogInput</RootNamespace>
+    <AssemblyName>TestAnalogInput</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LibCapteurAn, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Simulateur\LibCapteurAn.dll</HintPath>
-    </Reference>
     <Reference Include="LibMccDaq">
       <HintPath>..\Simulateur\LibMccDaq.dll</HintPath>
     </Reference>
@@ -50,11 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestMccBoard.cs" />
+    <Compile Include="TestAnalogInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibAnalogTools\LibAnalogTools.csproj">
+      <Project>{5c366ae6-9e73-49ad-9a78-800ebcca2fb7}</Project>
+      <Name>LibAnalogTools</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

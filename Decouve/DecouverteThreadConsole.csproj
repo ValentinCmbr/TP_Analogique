@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C550AA42-C6C2-4BDB-B96A-E20C5DC67890}</ProjectGuid>
+    <ProjectGuid>{1F483104-24E2-47EC-A855-BA9AFEDB3D04}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TestMccBoard</RootNamespace>
-    <AssemblyName>TestMccBoard</AssemblyName>
+    <RootNamespace>Decouve</RootNamespace>
+    <AssemblyName>Decouve</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,13 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LibCapteurAn, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Simulateur\LibCapteurAn.dll</HintPath>
-    </Reference>
-    <Reference Include="LibMccDaq">
-      <HintPath>..\Simulateur\LibMccDaq.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestMccBoard.cs" />
+    <Compile Include="DecouverteThreadConsole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
