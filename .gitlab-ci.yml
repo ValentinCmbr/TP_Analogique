@@ -1,0 +1,20 @@
+.shared_windows_runners:
+  tags:
+  - shared-windows
+  - windows
+  - windows-1809
+
+build:
+  extends:
+    - .shared_windows_runners
+  before_script:
+    - $Env:Path += ";C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin"
+    - node ci/setup.js
+  script:
+    - msbuild.exe TP_Analogique.sln
+  only:
+    refs:
+      - master
+  artifacts:
+    paths:
+      - "*/bin/Debug"
